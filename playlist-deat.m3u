@@ -1,0 +1,55 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="DasErste.de" tvg-logo="https://i.imgur.com/cMSMLGH.png" group-title="DE - Öffentlich-Rechtlich",Das Erste (ARD)
+https://derste247liveint.akamaized.net/hls/live/662735/daserste_int/master.m3u8
+#EXTINF:-1 tvg-id="3sat.de" tvg-logo="https://i.imgur.com/FBaOB0k.png" group-title="DE - Öffentlich-Rechtlich",3sat
+https://zdf-hls-18.akamaized.net/hls/live/2016501/dach/veryhigh/master.m3u8
+#EXTINF:-1 tvg-id="tagesschau24.de" tvg-logo="https://i.imgur.com/MnuSfHp.png" group-title="DE - Öffentlich-Rechtlich",tagesschau24
+https://tagesschau.akamaized.net/hls/live/2020115/tagesschau/tagesschau_1/master.m3u8
+#EXTINF:-1 tvg-id="ARDalpha.de" tvg-logo="https://i.imgur.com/9Ik5VRQ.png" group-title="DE - Öffentlich-Rechtlich",ARD alpha
+https://mcdn.br.de/br/fs/ard_alpha/hls/de/master.m3u8
+#EXTINF:-1 tvg-id="KiKA.de" tvg-logo="https://i.imgur.com/VBMHBbD.png" group-title="DE - Öffentlich-Rechtlich",KiKA
+https://kikageohls.akamaized.net/hls/live/2022693/livetvkika_de/master.m3u8
+#EXTINF:-1 tvg-id="WELT.de" tvg-logo="https://i.imgur.com/R0qMYAV.png" group-title="DE - Nachrichten",WELT
+https://w-live2weltcms.akamaized.net/hls/live/2041019/Welt-LivePGM/index.m3u8
+#EXTINF:-1 tvg-id="ntv.de" tvg-logo="https://i.imgur.com/dJB7JHv.png" group-title="DE - Nachrichten",n-tv
+https://viamotionhsi.netplus.ch/live/eds/ntv/browser-HLS8/ntv.m3u8
+#EXTINF:-1 tvg-id="NDR.de" tvg-logo="https://i.imgur.com/qPcWOBj.png" group-title="DE - Regional",NDR Hamburg
+https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_hh/master.m3u8
+#EXTINF:-1 tvg-id="WDR.de" tvg-logo="https://i.imgur.com/WwVDBhs.png" group-title="DE - Regional",WDR
+https://wdrfs247.akamaized.net/hls/live/681509/wdr_msl4_fs247/index.m3u8
+#EXTINF:-1 tvg-id="BR.de" tvg-logo="https://i.imgur.com/VCrqMTd.png" group-title="DE - Regional",BR Fernsehen
+https://mcdn.br.de/br/fs/bfs_nord/hls/de/master.m3u8
+#EXTINF:-1 tvg-id="HR.de" tvg-logo="https://i.imgur.com/rvBPOEr.png" group-title="DE - Regional",hr-fernsehen
+https://hrhls.akamaized.net/hls/live/2024525/hrhls/master.m3u8
+#EXTINF:-1 tvg-id="SR.de" tvg-logo="https://i.imgur.com/asFnHCC.png" group-title="DE - Regional",SR Fernsehen
+https://srfs.akamaized.net/hls/live/689649/srfsgeo/index.m3u8
+#EXTINF:-1 tvg-id="RTL.de" tvg-logo="https://i.imgur.com/UUhJjMX.png" group-title="DE - Privat",RTL
+https://viamotionhsi.netplus.ch/live/eds/rtl/browser-HLS8/rtl.m3u8
+#EXTINF:-1 tvg-id="SAT1.de" tvg-logo="https://i.imgur.com/3UdBJPQ.png" group-title="DE - Privat",SAT.1
+https://dash4.antik.sk/live/test_sat_eins_tizen/playlist.m3u8
+#EXTINF:-1 tvg-id="ProSieben.de" tvg-logo="https://i.imgur.com/JeF3kkI.png" group-title="DE - Privat",ProSieben
+https://dash4.antik.sk/live/test_pro_sieben_tizen/playlist.m3u8
+#EXTINF:-1 tvg-id="VOX.de" tvg-logo="https://i.imgur.com/mBl9g3g.png" group-title="DE - Privat",VOX
+https://viamotionhsi.netplus.ch/live/eds/vox/browser-HLS8/vox.m3u8
+#EXTINF:-1 tvg-id="kabel1.de" tvg-logo="https://i.imgur.com/OBxXrow.png" group-title="DE - Privat",kabel eins
+https://dash4.antik.sk/live/test_kabel_eins_tizen/playlist.m3u8
+#EXTINF:-1 tvg-id="RTL2.de" tvg-logo="https://i.imgur.com/FfGBXkU.png" group-title="DE - Privat",RTL ZWEI
+https://viamotionhsi.netplus.ch/live/eds/rtl2/browser-HLS8/rtl2.m3u8
+#EXTINF:-1 tvg-id="SuperRTL.de" tvg-logo="https://i.imgur.com/D36dF9K.png" group-title="DE - Privat",SUPER RTL
+https://viamotionhsi.netplus.ch/live/eds/superrtl/browser-HLS8/superrtl.m3u8
+#EXTINF:-1 tvg-id="Nitro.de" tvg-logo="https://i.imgur.com/4cKs5tM.png" group-title="DE - Privat",NITRO
+https://viamotionhsi.netplus.ch/live/eds/rtlnitro/browser-HLS8/rtlnitro.m3u8
+#EXTINF:-1 tvg-id="sixx.de" tvg-logo="https://i.imgur.com/XJJlXDh.png" group-title="DE - Privat",sixx
+https://dash4.antik.sk/live/test_sixx_tizen/playlist.m3u8
+#EXTINF:-1 tvg-id="SAT1Gold.de" tvg-logo="https://i.imgur.com/mjCDk9r.png" group-title="DE - Privat",SAT.1 Gold
+https://dash4.antik.sk/live/test_sat_eins_gold_tizen/playlist.m3u8
+#EXTINF:-1 tvg-id="Disney.de" tvg-logo="https://i.imgur.com/XsfuVgM.png" group-title="DE - Privat",Disney Channel
+https://viamotionhsi.netplus.ch/live/eds/disneychannelde/browser-HLS8/disneychannelde.m3u8
+#EXTINF:-1 tvg-id="ComedyCentral.de" tvg-logo="https://i.imgur.com/ko6YJjL.png" group-title="DE - Privat",Comedy Central
+https://viamotionhsi.netplus.ch/live/eds/comedycentral/browser-HLS8/comedycentral.m3u8
+#EXTINF:-1 tvg-id="ORF3.at" tvg-logo="https://i.imgur.com/hYpUBL0.png" group-title="AT",ORF III
+https://orf3.mdn.ors.at/orf/orf3/qxa/manifest.m3u8
+#EXTINF:-1 tvg-id="ServusTV.at" tvg-logo="https://i.imgur.com/80WRqbJ.png" group-title="AT",ServusTV
+https://viamotionhsi.netplus.ch/live/eds/servustvhd/browser-HLS8/servustvhd.m3u8
+#EXTINF:-1 tvg-id="ATV2.at" tvg-logo="https://i.imgur.com/0YIU0vS.png" group-title="AT",ATV 2
+https://viamotionhsi.netplus.ch/live/eds/atv/browser-HLS8/atv.m3u8
