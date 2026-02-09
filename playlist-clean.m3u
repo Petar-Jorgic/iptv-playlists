@@ -1,57 +1,57 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="Pink.rs" tvg-logo="https://i.imgur.com/66wHb7E.png" group-title="Entertainment",Pink TV (720p)
+#EXTINF:-1 tvg-id="Pink.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/Pink.rs.png" group-title="Entertainment",Pink TV (720p)
 https://edge8.pink.rs/pinktv/index.m3u8
-#EXTINF:-1 tvg-id="RedTV.rs" tvg-logo="https://i.imgur.com/cpN7NrL.png" group-title="Entertainment",Red TV (720p)
+#EXTINF:-1 tvg-id="RedTV.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RedTV.rs.png" group-title="Entertainment",Red TV (720p)
 https://edge8.pink.rs/redtv/index.m3u8
-#EXTINF:-1 tvg-id="NarodnaTV.rs" tvg-logo="https://i.postimg.cc/fRrHBCQf/narodnatv.png" group-title="Entertainment",Narodna TV (720p)
+#EXTINF:-1 tvg-id="NarodnaTV.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NarodnaTV.rs.png" group-title="Entertainment",Narodna TV (720p)
 https://edge8.pink.rs/narodnatv/index.m3u8
-#EXTINF:-1 tvg-id="RTS1.rs" tvg-logo="https://i.imgur.com/S1pKHSR.png" group-title="General",RTS 1 (720p)
+#EXTINF:-1 tvg-id="RTS1.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RTS1.rs.png" group-title="General",RTS 1 (720p)
 https://webtvstream.bhtelecom.ba/rts1.m3u8
-#EXTINF:-1 tvg-id="RTS2.rs" tvg-logo="https://i.imgur.com/jltAf5h.png" group-title="General",RTS 2 (720p)
+#EXTINF:-1 tvg-id="RTS2.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RTS2.rs.png" group-title="General",RTS 2 (720p)
 https://webtvstream.bhtelecom.ba/rts2.m3u8
-#EXTINF:-1 tvg-id="TVAS.rs" tvg-logo="https://i.imgur.com/LIUtEgD.png" group-title="General",RTV AS (576p)
+#EXTINF:-1 tvg-id="TVAS.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TVAS.rs.png" group-title="General",RTV AS (576p)
 https://srv1.adriatelekom.com/TVAS/index.m3u8
-#EXTINF:-1 tvg-id="TVArta.xk" tvg-logo="https://i.imgur.com/MAhJkK9.png" group-title="News",TV Arta (1080p)
+#EXTINF:-1 tvg-id="TVArta.xk" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TVArta.xk.png" group-title="News",TV Arta (1080p)
 https://gjirafa-video-live.gjirafa.net/gjvideo-live/mps-vgx-u9p-qv1/index.m3u8
-#EXTINF:-1 tvg-id="BalkanRadioSalzburg.at" tvg-logo="https://i.imgur.com/UDyxgXf.png" group-title="Entertainment",Balkan Radio Salzburg (480p)
+#EXTINF:-1 tvg-id="BalkanRadioSalzburg.at" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/BalkanRadioSalzburg.at.png" group-title="Entertainment",Balkan Radio Salzburg (480p)
 https://channel.streams.ovh:1936/balkanradiosalzburgtv/balkanradiosalzburgtv/playlist.m3u8
-#EXTINF:-1 tvg-id="TVBelleAmie.rs" tvg-logo="https://i.imgur.com/tOlN5Rz.png" group-title="General",TV Belle Amie (540p)
+#EXTINF:-1 tvg-id="TVBelleAmie.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TVBelleAmie.rs.png" group-title="General",TV Belle Amie (540p)
 http://92.60.238.10:1935/live/belleamie/playlist.m3u8
-#EXTINF:-1 tvg-id="TVHram.rs" tvg-logo="https://i.postimg.cc/Dzn721zs/tvhram.png" group-title="Religious",TV Hram (576p)
+#EXTINF:-1 tvg-id="TVHram.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TVHram.rs.png" group-title="Religious",TV Hram (576p)
 https://vod1.laki.eu/live/hram/index.m3u8
-#EXTINF:-1 tvg-id="PiKanal.rs" tvg-logo="https://i.imgur.com/8ugnFa3.png" group-title="General",TV Pi Kanal (576p)
+#EXTINF:-1 tvg-id="PiKanal.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/PiKanal.rs.png" group-title="General",TV Pi Kanal (576p)
 https://stream.pikanal.rs/pikanal/pgm.m3u8
-#EXTINF:-1 tvg-id="RadioHitFMTV.rs" tvg-logo="https://i.imgur.com/gP2OT4S.png" group-title="Music",Radio Hit FM TV (720p)
+#EXTINF:-1 tvg-id="RadioHitFMTV.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RadioHitFMTV.rs.png" group-title="Music",Radio Hit FM TV (720p)
 https://peer2.tdiradio.com/static/streaming-playlists/hls/bab99862-ec1c-474f-9a02-4f8c8677d565/0.m3u8
-#EXTINF:-1 tvg-id="RadioKarolinaTV.rs" tvg-logo="https://i.imgur.com/g2HpLX1.png" group-title="Music",Radio Karolina TV (720p)
+#EXTINF:-1 tvg-id="RadioKarolinaTV.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RadioKarolinaTV.rs.png" group-title="Music",Radio Karolina TV (720p)
 https://peer2.tdiradio.com/static/streaming-playlists/hls/4207de1d-52e8-4591-ad9e-218069b864d1/0.m3u8
-#EXTINF:-1 tvg-id="RadioLolaTV.rs" tvg-logo="https://i.imgur.com/41eE8fl.png" group-title="Music",Radio Lola (720p)
+#EXTINF:-1 tvg-id="RadioLolaTV.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RadioLolaTV.rs.png" group-title="Music",Radio Lola (720p)
 https://peer2.tdiradio.com/static/streaming-playlists/hls/7c3ea8d3-49dc-4e1b-8b1e-dc6fab71f5cf/0.m3u8
-#EXTINF:-1 tvg-id="TDIRadioTV.rs" tvg-logo="https://i.imgur.com/POdTmaD.png" group-title="Music",TDI Radio TV (720p)
+#EXTINF:-1 tvg-id="TDIRadioTV.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TDIRadioTV.rs.png" group-title="Music",TDI Radio TV (720p)
 https://peer2.tdiradio.com/static/streaming-playlists/hls/8f5d84ce-e8ac-4109-9975-9665f5605557/master.m3u8
-#EXTINF:-1 tvg-id="EWTNEurope.us" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/EWTN_Logo_and_Wordmark_%282016%29.svg/512px-EWTN_Logo_and_Wordmark_%282016%29.svg.png" group-title="Religious",EWTN Europe (720p)
+#EXTINF:-1 tvg-id="EWTNEurope.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/EWTNEurope.us.png" group-title="Religious",EWTN Europe (720p)
 https://cdn3.wowza.com/1/T2NXeHF6UGlGbHY3/WFluRldQ/hls/live/playlist.m3u8
-#EXTINF:-1 tvg-id="RedBullTV.at" tvg-logo="https://i.imgur.com/KbsClPe.png" group-title="Sport",Red Bull TV (1080p)
+#EXTINF:-1 tvg-id="RedBullTV.at" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RedBullTV.at.png" group-title="Sport",Red Bull TV (1080p)
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
-#EXTINF:-1 tvg-id="FIFAPlus.ch" tvg-logo="https://i.imgur.com/JHVCqoA.png" group-title="Sport",FIFA+ (1080p)
+#EXTINF:-1 tvg-id="FIFAPlus.ch" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/FIFAPlus.ch.png" group-title="Sport",FIFA+ (1080p)
 https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-id="CBSGolazo.us" tvg-logo="https://i.imgur.com/dCCk4BI.png" group-title="Sport",CBS Sports Golazo (1080p)
+#EXTINF:-1 tvg-id="CBSGolazo.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/CBSGolazo.us.png" group-title="Sport",CBS Sports Golazo (1080p)
 https://dai.google.com/linear/hls/event/GxrCGmwST0ixsrc_QgB6qw/master.m3u8
-#EXTINF:-1 tvg-id="RealMadridTV.es" tvg-logo="https://i.imgur.com/jFmbYwn.png" group-title="Sport",Real Madrid TV (720p)
+#EXTINF:-1 tvg-id="RealMadridTV.es" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RealMadridTV.es.png" group-title="Sport",Real Madrid TV (720p)
 http://176.65.146.237:8401/play/a0ak/index.m3u8
-#EXTINF:-1 tvg-id="LEquipe.fr" tvg-logo="https://i.imgur.com/Htwz4MH.png" group-title="Sport",L'Equipe (1080p)
+#EXTINF:-1 tvg-id="LEquipe.fr" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/LEquipe.fr.png" group-title="Sport",L'Equipe (1080p)
 https://dshn8inoshngm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gac2i63dmu8b7/LEquipe_FR.m3u8
-#EXTINF:-1 tvg-id="Teledeporte.es" tvg-logo="https://i.imgur.com/0gE2bfm.png" group-title="Sport",Teledeporte (720p)
+#EXTINF:-1 tvg-id="Teledeporte.es" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/Teledeporte.es.png" group-title="Sport",Teledeporte (720p)
 https://d1cctoeg0n48w5.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mnixw9wn5ugmv/TeledeporteES.m3u8
 #EXTINF:-1 tvg-id="FIGHTSports.us" tvg-logo="https://i.imgur.com/3mlbffK.png" group-title="Sport",FIGHT SPORTS (1080p)
 https://shls-fight-sports-ak.akamaized.net/out/v1/ee7e6475b12e484bbfa5c31461ad4306/index.m3u8
-#EXTINF:-1 tvg-id="DAZNCombat.uk" tvg-logo="https://i.imgur.com/2sKfnBr.png" group-title="Sport",DAZN Combat (1080p)
+#EXTINF:-1 tvg-id="DAZNCombat.uk" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/DAZNCombat.uk.png" group-title="Sport",DAZN Combat (1080p)
 https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
 #EXTINF:-1 tvg-id="GLORYKickboxing.nl" tvg-logo="https://i.imgur.com/7ndVwcw.png" group-title="Sport",GLORY Kickboxing (1080p)
 https://6f972d29.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0dsb3J5S2lja2JveGluZ19ITFM/playlist.m3u8
 #EXTINF:-1 tvg-id="FUELTV.us" tvg-logo="https://i.imgur.com/qPxQy9V.png" group-title="Sport",FUEL TV (1080p)
 https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_rakutenAA-fueltvemeaen/CDN/master.m3u8
-#EXTINF:-1 tvg-id="MoreThanSportsTV.de" tvg-logo="https://i.imgur.com/2YuP7yI.png" group-title="Sport",More Than Sports TV (1080p)
+#EXTINF:-1 tvg-id="MoreThanSportsTV.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/MoreThanSportsTV.de.png" group-title="Sport",More Than Sports TV (1080p)
 https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8
-#EXTINF:-1 tvg-id="TennisChannel.us" tvg-logo="https://i.imgur.com/VFr7kPR.png" group-title="Sport",Tennis Channel (720p)
+#EXTINF:-1 tvg-id="TennisChannel.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TennisChannel.us.png" group-title="Sport",Tennis Channel (720p)
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01444-tennischannelth-tennischannelnl-samsungnl/playlist.m3u8
