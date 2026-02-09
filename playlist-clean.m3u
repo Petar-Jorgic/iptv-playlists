@@ -31,55 +31,19 @@ https://peer2.tdiradio.com/static/streaming-playlists/hls/7c3ea8d3-49dc-4e1b-8b1
 https://peer2.tdiradio.com/static/streaming-playlists/hls/8f5d84ce-e8ac-4109-9975-9665f5605557/master.m3u8
 #EXTINF:-1 tvg-id="EWTNEurope.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/EWTNEurope.us.png" group-title="Religious",EWTN Europe (720p)
 https://cdn3.wowza.com/1/T2NXeHF6UGlGbHY3/WFluRldQ/hls/live/playlist.m3u8
-#EXTINF:-1 tvg-id="RedBullTV.at" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RedBullTV.at.png" group-title="Sport",Red Bull TV (1080p)
-https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
-#EXTINF:-1 tvg-id="FIFAPlus.ch" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/FIFAPlus.ch.png" group-title="Sport",FIFA+ (1080p)
-https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
-#EXTINF:-1 tvg-id="CBSGolazo.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/CBSGolazo.us.png" group-title="Sport",CBS Sports Golazo (1080p)
-https://dai.google.com/linear/hls/event/GxrCGmwST0ixsrc_QgB6qw/master.m3u8
-#EXTINF:-1 tvg-id="RealMadridTV.es" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RealMadridTV.es.png" group-title="Sport",Real Madrid TV (720p)
-http://176.65.146.237:8401/play/a0ak/index.m3u8
-#EXTINF:-1 tvg-id="LEquipe.fr" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/LEquipe.fr.png" group-title="Sport",L'Equipe (1080p)
-https://dshn8inoshngm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gac2i63dmu8b7/LEquipe_FR.m3u8
-#EXTINF:-1 tvg-id="Teledeporte.es" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/Teledeporte.es.png" group-title="Sport",Teledeporte (720p)
-https://d1cctoeg0n48w5.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-mnixw9wn5ugmv/TeledeporteES.m3u8
-#EXTINF:-1 tvg-id="FIGHTSports.us" tvg-logo="https://i.imgur.com/3mlbffK.png" group-title="Sport",FIGHT SPORTS (1080p)
-https://shls-fight-sports-ak.akamaized.net/out/v1/ee7e6475b12e484bbfa5c31461ad4306/index.m3u8
-#EXTINF:-1 tvg-id="DAZNCombat.uk" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/DAZNCombat.uk.png" group-title="Sport",DAZN Combat (1080p)
-https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8
-#EXTINF:-1 tvg-id="GLORYKickboxing.nl" tvg-logo="https://i.imgur.com/7ndVwcw.png" group-title="Sport",GLORY Kickboxing (1080p)
-https://6f972d29.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0dsb3J5S2lja2JveGluZ19ITFM/playlist.m3u8
-#EXTINF:-1 tvg-id="FUELTV.us" tvg-logo="https://i.imgur.com/qPxQy9V.png" group-title="Sport",FUEL TV (1080p)
-https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_rakutenAA-fueltvemeaen/CDN/master.m3u8
-#EXTINF:-1 tvg-id="MoreThanSportsTV.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/MoreThanSportsTV.de.png" group-title="Sport",More Than Sports TV (1080p)
-https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8
-#EXTINF:-1 tvg-id="TennisChannel.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TennisChannel.us.png" group-title="Sport",Tennis Channel (720p)
-https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01444-tennischannelth-tennischannelnl-samsungnl/playlist.m3u8
 #EXTINF:-1 tvg-id="NFLChannel.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NFLChannel.us.png" group-title="American Football",NFL Channel (720p)
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ced7d5df64be98e07ed47b6/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a5105-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=6477ef85-3680-442c-94d8-27197903b1f6
+#EXTINF:-1 tvg-id="NFLRedZone.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NFLRedZone.us.png" group-title="American Football",NFL RedZone (720p)
+https://tvpass.org/live/NFLRedZone/hd
+#EXTINF:-1 tvg-id="ACCNetwork.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ACCNetwork.us.png" group-title="American Football",ACC Network (720p)
+https://fl1.moveonjoy.com/ACC_NETWORK/index.m3u8
 #EXTINF:-1 tvg-id="Stadium.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/Stadium.us.png" group-title="American Football",Stadium (720p)
 https://aegis-cloudfront-1.tubi.video/74681dcc-e6d0-4add-ad67-a22ad9c152e6/playlist.m3u8
 #EXTINF:-1 tvg-id="ESPNU.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ESPNU.us.png" group-title="American Football",ESPN U (720p)
 https://fl1.moveonjoy.com/ESPN_U/index.m3u8
 #EXTINF:-1 tvg-id="ESPNews.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ESPNews.us.png" group-title="American Football",ESPNews (720p)
 https://fl1.moveonjoy.com/ESPN_NEWS/index.m3u8
-#EXTINF:-1 tvg-id="MLB.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/MLB.us.png" group-title="Sport",MLB (720p)
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5e66968a70f34c0007d050be/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c29dbd3-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=0f1d3baf-2f1b-47d7-9966-3e92a98f1c8a
-#EXTINF:-1 tvg-id="MLBNetwork.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/MLBNetwork.us.png" group-title="Sport",MLB Network (720p)
-https://fl1.moveonjoy.com/MLB_NETWORK/index.m3u8
-#EXTINF:-1 tvg-id="BellatorMMA.us" group-title="Sport",Bellator MMA (720p)
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ebc8688f3697d00072f7cf8/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c26f5a6-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=0e97a69e-3355-4217-b6fb-8952f0ad1803
-#EXTINF:-1 tvg-id="MMATV.ru" group-title="Sport",MMA-TV.com (720p)
-https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8
-#EXTINF:-1 tvg-id="TVSBoxing.us" group-title="Sport",TVS Boxing (360p)
-https://rpn.bozztv.com/gusa/gusa-tvsboxing/index.m3u8
-#EXTINF:-1 tvg-id="FoxDeportes.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/FoxDeportes.us.png" group-title="Sport",Fox Sports en Espanol (720p)
-https://live-manifest.production-public.tubi.io/live/d906efca-1302-4e29-b0d9-9a1d7a305d69/playlist.m3u8
-#EXTINF:-1 tvg-id="AdventureSportsTV.us" group-title="Sport",Adventure Sports TV (1080p)
-https://d3rl6ns7c3ilda.cloudfront.net/scheduler/scheduleMaster/438.m3u8
-#EXTINF:-1 tvg-id="WorldofFreesports.de" group-title="Sport",World of Freesports (1080p)
-https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-mainstreammediafreesportsintl-rakuten/CDN/master.m3u8
-#EXTINF:-1 tvg-id="FanDuelRacing.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/FanDuelRacing.us.png" group-title="Sport",FanDuel Racing (720p)
-https://d3ehq1uaxory6w.cloudfront.net/out/v1/35c05f080f4e49a4b4eb031b5a14e505/TVG2index_2.m3u8
 #EXTINF:-1 tvg-id="BoxGamers.us" group-title="Esports",Box Gamers (720p)
 https://d3s7x6kmqcnb6b.cloudfront.net/d/distro001a/QK2TKFREGRYXDI8IJGHW/hls3/now,-1m/m.m3u8?ads.vf=kU8ru-Yl4zG
+#EXTINF:-1 tvg-id="Esport3.es" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/Esport3.es.png" group-title="Esports",Esport3 (720p)
+https://directes-tv-int.3catdirectes.cat/live-content/esport3-hls/master.m3u8
