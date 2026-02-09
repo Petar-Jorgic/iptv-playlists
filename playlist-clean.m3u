@@ -55,3 +55,31 @@ https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_r
 https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8
 #EXTINF:-1 tvg-id="TennisChannel.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TennisChannel.us.png" group-title="Sport",Tennis Channel (720p)
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01444-tennischannelth-tennischannelnl-samsungnl/playlist.m3u8
+#EXTINF:-1 tvg-id="NFLChannel.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NFLChannel.us.png" group-title="American Football",NFL Channel (720p)
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ced7d5df64be98e07ed47b6/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a5105-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=6477ef85-3680-442c-94d8-27197903b1f6
+#EXTINF:-1 tvg-id="Stadium.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/Stadium.us.png" group-title="American Football",Stadium (720p)
+https://aegis-cloudfront-1.tubi.video/74681dcc-e6d0-4add-ad67-a22ad9c152e6/playlist.m3u8
+#EXTINF:-1 tvg-id="ESPNU.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ESPNU.us.png" group-title="American Football",ESPN U (720p)
+https://fl1.moveonjoy.com/ESPN_U/index.m3u8
+#EXTINF:-1 tvg-id="ESPNews.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ESPNews.us.png" group-title="American Football",ESPNews (720p)
+https://fl1.moveonjoy.com/ESPN_NEWS/index.m3u8
+#EXTINF:-1 tvg-id="MLB.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/MLB.us.png" group-title="Sport",MLB (720p)
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5e66968a70f34c0007d050be/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c29dbd3-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=0f1d3baf-2f1b-47d7-9966-3e92a98f1c8a
+#EXTINF:-1 tvg-id="MLBNetwork.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/MLBNetwork.us.png" group-title="Sport",MLB Network (720p)
+https://fl1.moveonjoy.com/MLB_NETWORK/index.m3u8
+#EXTINF:-1 tvg-id="BellatorMMA.us" group-title="Sport",Bellator MMA (720p)
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ebc8688f3697d00072f7cf8/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c26f5a6-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=0e97a69e-3355-4217-b6fb-8952f0ad1803
+#EXTINF:-1 tvg-id="MMATV.ru" group-title="Sport",MMA-TV.com (720p)
+https://streams2.sofast.tv/vglive-sk-462904/playlist.m3u8
+#EXTINF:-1 tvg-id="TVSBoxing.us" group-title="Sport",TVS Boxing (360p)
+https://rpn.bozztv.com/gusa/gusa-tvsboxing/index.m3u8
+#EXTINF:-1 tvg-id="FoxDeportes.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/FoxDeportes.us.png" group-title="Sport",Fox Sports en Espanol (720p)
+https://live-manifest.production-public.tubi.io/live/d906efca-1302-4e29-b0d9-9a1d7a305d69/playlist.m3u8
+#EXTINF:-1 tvg-id="AdventureSportsTV.us" group-title="Sport",Adventure Sports TV (1080p)
+https://d3rl6ns7c3ilda.cloudfront.net/scheduler/scheduleMaster/438.m3u8
+#EXTINF:-1 tvg-id="WorldofFreesports.de" group-title="Sport",World of Freesports (1080p)
+https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-mainstreammediafreesportsintl-rakuten/CDN/master.m3u8
+#EXTINF:-1 tvg-id="FanDuelRacing.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/FanDuelRacing.us.png" group-title="Sport",FanDuel Racing (720p)
+https://d3ehq1uaxory6w.cloudfront.net/out/v1/35c05f080f4e49a4b4eb031b5a14e505/TVG2index_2.m3u8
+#EXTINF:-1 tvg-id="BoxGamers.us" group-title="Esports",Box Gamers (720p)
+https://d3s7x6kmqcnb6b.cloudfront.net/d/distro001a/QK2TKFREGRYXDI8IJGHW/hls3/now,-1m/m.m3u8?ads.vf=kU8ru-Yl4zG
