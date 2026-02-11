@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iptv-proxy
+  labels:
+    app: iptv-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iptv-proxy
+  template:
+    metadata:
+      labels:
+        app: iptv-proxy
+    spec:
+      containers:
+        - name: iptv-proxy
+          image: docker.io/library/iptv-proxy:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: M3U_URL
+              value: "https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/playlist-clean.m3u"
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - name: wireguard-config
+              mountPath: /etc/wireguard/wg0.conf
+              subPath: wg0.conf
+              readOnly: true
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+      volumes:
+        - name: wireguard-config
+          secret:
+            secretName: wireguard-config
