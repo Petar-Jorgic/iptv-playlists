@@ -1,5 +1,5 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="DasErste.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/DasErste.de.png" group-title="DE - Öffentlich-Rechtlich",Das Erste (ARD)
+#EXTINF:-1 tvg-id="76674" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/DasErste.de.png" group-title="DE - Öffentlich-Rechtlich",Das Erste (ARD)
 https://derste247liveint.akamaized.net/hls/live/662735/daserste_int/master.m3u8
 #EXTINF:-1 tvg-id="3sat.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/3sat.de.png" group-title="DE - Öffentlich-Rechtlich",3sat
 https://zdf-hls-18.akamaized.net/hls/live/2016501/dach/veryhigh/master.m3u8
@@ -13,15 +13,15 @@ https://kikageohls.akamaized.net/hls/live/2022693/livetvkika_de/master.m3u8
 https://w-live2weltcms.akamaized.net/hls/live/2041019/Welt-LivePGM/index.m3u8
 #EXTINF:-1 tvg-id="ntv.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ntv.de.png" group-title="DE - Nachrichten",n-tv
 https://viamotionhsi.netplus.ch/live/eds/ntv/browser-HLS8/ntv.m3u8
-#EXTINF:-1 tvg-id="NDR.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NDR.de.png" group-title="DE - Regional",NDR Hamburg
+#EXTINF:-1 tvg-id="76748" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NDR.de.png" group-title="DE - Regional",NDR Hamburg
 https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_hh/master.m3u8
 #EXTINF:-1 tvg-id="WDR.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/WDR.de.png" group-title="DE - Regional",WDR
 https://wdrfs247.akamaized.net/hls/live/681509/wdr_msl4_fs247/index.m3u8
-#EXTINF:-1 tvg-id="BR.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/BR.de.png" group-title="DE - Regional",BR Fernsehen
+#EXTINF:-1 tvg-id="76712" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/BR.de.png" group-title="DE - Regional",BR Fernsehen
 https://mcdn.br.de/br/fs/bfs_nord/hls/de/master.m3u8
-#EXTINF:-1 tvg-id="HR.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/HR.de.png" group-title="DE - Regional",hr-fernsehen
+#EXTINF:-1 tvg-id="76648" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/HR.de.png" group-title="DE - Regional",hr-fernsehen
 https://hrhls.akamaized.net/hls/live/2024525/hrhls/master.m3u8
-#EXTINF:-1 tvg-id="SR.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/SR.de.png" group-title="DE - Regional",SR Fernsehen
+#EXTINF:-1 tvg-id="76693" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/SR.de.png" group-title="DE - Regional",SR Fernsehen
 https://srfs.akamaized.net/hls/live/689649/srfsgeo/index.m3u8
 #EXTINF:-1 tvg-id="RTL.de" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RTL.de.png" group-title="DE - Privat",RTL
 https://viamotionhsi.netplus.ch/live/eds/rtl/browser-HLS8/rtl.m3u8
@@ -49,9 +49,9 @@ https://viamotionhsi.netplus.ch/live/eds/disneychannelde/browser-HLS8/disneychan
 https://viamotionhsi.netplus.ch/live/eds/comedycentral/browser-HLS8/comedycentral.m3u8
 #EXTINF:-1 tvg-id="ORF3.at" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ORF3.at.png" group-title="AT",ORF III
 https://orf3.mdn.ors.at/orf/orf3/qxa/manifest.m3u8
-#EXTINF:-1 tvg-id="ServusTV.at" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ServusTV.at.png" group-title="AT",ServusTV
+#EXTINF:-1 tvg-id="438450" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ServusTV.at.png" group-title="AT",ServusTV
 https://viamotionhsi.netplus.ch/live/eds/servustvhd/browser-HLS8/servustvhd.m3u8
-#EXTINF:-1 tvg-id="ATV2.at" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ATV2.at.png" group-title="AT",ATV 2
+#EXTINF:-1 tvg-id="76638" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/ATV2.at.png" group-title="AT",ATV 2
 https://viamotionhsi.netplus.ch/live/eds/atv/browser-HLS8/atv.m3u8
 #EXTINF:-1 tvg-id="NFLChannel.us" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NFLChannel.us.png" group-title="American Football",NFL Channel (720p)
 http://iptv-proxy.default:8080/pluto/5ced7d5df64be98e07ed47b6
