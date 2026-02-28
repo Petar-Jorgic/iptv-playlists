@@ -1,10 +1,10 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="tv_pink" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/Pink.rs.png" group-title="Entertainment",Pink TV (720p)
-https://edge8.pink.rs/pinktv/index.m3u8
+https://edge8.pink.rs/pinktv/playlist.m3u8
 #EXTINF:-1 tvg-id="red_tv" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RedTV.rs.png" group-title="Entertainment",Red TV (720p)
-https://edge8.pink.rs/redtv/index.m3u8
+https://edge8.pink.rs/redtv/playlist.m3u8
 #EXTINF:-1 tvg-id="Narodna_TV" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/NarodnaTV.rs.png" group-title="Entertainment",Narodna TV (720p)
-https://edge8.pink.rs/narodnatv/index.m3u8
+https://edge8.pink.rs/narodnatv/playlist.m3u8
 #EXTINF:-1 tvg-id="rts_1_hd" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RTS1.rs.png" group-title="General",RTS 1 (720p)
 https://webtvstream.bhtelecom.ba/rts1.m3u8
 #EXTINF:-1 tvg-id="rts_2_hd" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/RTS2.rs.png" group-title="General",RTS 2 (720p)
