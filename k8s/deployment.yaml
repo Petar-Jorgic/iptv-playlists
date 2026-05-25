@@ -14,26 +14,65 @@ spec:
       labels:
         app: iptv-proxy
     spec:
-      # imagePullPolicy: Never + image (localhost/iptv-proxy:vN) is only imported
-      # into pj's containerd -> pin here, else a reschedule to an (ARM) worker fails.
+      # localhost/iptv-proxy image (imagePullPolicy: Never) only exists in pj's containerd
       nodeSelector:
         kubernetes.io/hostname: pj
       containers:
+        # VPN sidecar (ProtonVPN RS via custom WireGuard). gluetun owns the pod network,
+        # monitors the tunnel and self-heals -> no more flaky-VPN-on-restart / manual delete-pod.
+        # FIREWALL_OUTBOUND_SUBNETS keeps cluster+LAN replies off the VPN -> inbound/LB works.
+        - name: gluetun
+          image: qmcgaw/gluetun:latest
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+          ports:
+            - containerPort: 8080   # iptv-proxy webui/stream
+          env:
+            - name: VPN_SERVICE_PROVIDER
+              value: "custom"
+            - name: VPN_TYPE
+              value: "wireguard"
+            - name: VPN_ENDPOINT_IP
+              valueFrom: { secretKeyRef: { name: gluetun-vpn-iptv, key: VPN_ENDPOINT_IP } }
+            - name: VPN_ENDPOINT_PORT
+              valueFrom: { secretKeyRef: { name: gluetun-vpn-iptv, key: VPN_ENDPOINT_PORT } }
+            - name: WIREGUARD_PUBLIC_KEY
+              valueFrom: { secretKeyRef: { name: gluetun-vpn-iptv, key: WIREGUARD_PUBLIC_KEY } }
+            - name: WIREGUARD_PRIVATE_KEY
+              valueFrom: { secretKeyRef: { name: gluetun-vpn-iptv, key: WIREGUARD_PRIVATE_KEY } }
+            - name: WIREGUARD_ADDRESSES
+              valueFrom: { secretKeyRef: { name: gluetun-vpn-iptv, key: WIREGUARD_ADDRESSES } }
+            - name: FIREWALL_OUTBOUND_SUBNETS
+              value: "192.168.0.0/16,172.16.0.0/12,10.0.0.0/8"
+            - name: DOT
+              value: "off"
+            - name: DNS_ADDRESS
+              value: "10.43.15.186"
+            - name: HEALTH_VPN_DURATION_INITIAL
+              value: "30s"
+            - name: WIREGUARD_MTU
+              value: "1420"
+            - name: TZ
+              value: "Europe/Berlin"
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+        # the proxy itself: shares gluetun's network namespace, just runs gunicorn
+        # (no wg-quick anymore -> command override skips the old entrypoint).
         - name: iptv-proxy
           image: localhost/iptv-proxy:v7
           imagePullPolicy: Never
-          ports:
-            - containerPort: 8080
+          workingDir: /app
+          command: ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "1", "--threads", "16", "--timeout", "120", "app:app"]
           env:
             - name: M3U_URL
               value: "https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/playlist-clean.m3u"
-          securityContext:
-            privileged: true
-          volumeMounts:
-            - name: wireguard-config
-              mountPath: /etc/wireguard/wg0.conf
-              subPath: wg0.conf
-              readOnly: true
           resources:
             requests:
               cpu: 100m
@@ -45,17 +84,11 @@ spec:
             httpGet:
               path: /health
               port: 8080
-            # WireGuard setup runs before gunicorn starts; give it room so the
-            # probe doesn't kill the pod mid-VPN-bringup (causes a flaky tunnel).
             initialDelaySeconds: 45
             periodSeconds: 30
           readinessProbe:
             httpGet:
               path: /health
               port: 8080
-            initialDelaySeconds: 5
+            initialDelaySeconds: 10
             periodSeconds: 10
-      volumes:
-        - name: wireguard-config
-          secret:
-            secretName: wireguard-config
