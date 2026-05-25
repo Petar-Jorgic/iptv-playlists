@@ -14,9 +14,13 @@ spec:
       labels:
         app: iptv-proxy
     spec:
+      # imagePullPolicy: Never + image (localhost/iptv-proxy:vN) is only imported
+      # into pj's containerd -> pin here, else a reschedule to an (ARM) worker fails.
+      nodeSelector:
+        kubernetes.io/hostname: pj
       containers:
         - name: iptv-proxy
-          image: docker.io/library/iptv-proxy:latest
+          image: localhost/iptv-proxy:v3
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
@@ -41,7 +45,9 @@ spec:
             httpGet:
               path: /health
               port: 8080
-            initialDelaySeconds: 10
+            # WireGuard setup runs before gunicorn starts; give it room so the
+            # probe doesn't kill the pod mid-VPN-bringup (causes a flaky tunnel).
+            initialDelaySeconds: 45
             periodSeconds: 30
           readinessProbe:
             httpGet:

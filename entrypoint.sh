@@ -13,9 +13,15 @@ PUBLIC_IP=$(wget -qO- https://ifconfig.me || echo "unknown")
 echo "[*] Public IP: $PUBLIC_IP"
 
 echo "[*] Starting IPTV proxy on :8080..."
+# MUST be 1 worker: pink.rs (and similar) tie the HLS chunklist token to the
+# requests.Session cookie jar. Multiple workers = multiple jars, so ffmpeg's
+# follow-up chunklist fetch can hit a worker without the cookie -> source returns
+# a fresh master/token instead of segments -> endless playlist-refresh loop, no
+# .ts output, player buffers forever. One worker + many threads keeps the session
+# shared while still serving concurrent streams.
 exec gunicorn \
   --bind 0.0.0.0:8080 \
-  --workers 4 \
-  --threads 4 \
+  --workers "${GUNICORN_WORKERS:-1}" \
+  --threads "${GUNICORN_THREADS:-16}" \
   --timeout 120 \
   app:app

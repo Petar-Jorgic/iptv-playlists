@@ -13,3 +13,23 @@ spec:
       targetPort: 8080
       protocol: TCP
       name: http
+---
+# LAN-reachable LoadBalancer so the NAS Jellyfin (off-cluster) can use this as a
+# Live TV M3U tuner: http://192.168.1.20:8080/playlist.m3u  (host-aware -> stream
+# URLs come back with the LB IP). ClusterIP/cluster-DNS (iptv-proxy.default) is
+# NOT reachable from the NAS.
+apiVersion: v1
+kind: Service
+metadata:
+  name: iptv-proxy-lb
+  labels:
+    app: iptv-proxy
+spec:
+  type: LoadBalancer
+  selector:
+    app: iptv-proxy
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
