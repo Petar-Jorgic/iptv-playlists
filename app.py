@@ -341,40 +341,61 @@ def _parse_media_segments(content: str, base_url: str):
     return segs, target
 
 
-def _resolve_media_playlist(channel_url: str):
-    """Fetch a channel URL, follow master->media variant, return (segments, target_dur)."""
+def _resolve_to_media_url(channel_url: str):
+    """Resolve a channel URL (following master->variant) to a MEDIA playlist URL."""
     base_url = channel_url
     for _ in range(4):
         try:
             r = SESSION.get(base_url, timeout=15)
         except http_requests.RequestException:
-            return [], 2.0
+            return None
         if r.status_code >= 400:
-            return [], 2.0
+            return None
         content = r.text
         if "#EXT-X-STREAM-INF" in content:
             v = _first_variant_url(content, base_url)
             if not v:
-                break
+                return None
             base_url = v
             continue
-        return _parse_media_segments(content, base_url)
-    return [], 2.0
+        if "#EXTINF" in content:
+            return base_url
+        return None
+    return None
 
 
 def _ts_stream(channel_url: str):
-    """Yield live HLS segments (downloaded through the VPN) as a continuous MPEG-TS
-    byte stream, so the player gets plain TS instead of an HLS playlist."""
+    """Yield live HLS as a continuous MPEG-TS byte stream. Resolve master->media
+    ONCE, then poll the SAME media playlist (stable token via the shared session
+    cookie) for new segments; re-resolve only when it expires/empties. Dedup by
+    segment sequence so re-resolves never replay or gap -> smooth live playback."""
+    media_url = None
     last_seq = -1
     misses = 0
-    while misses < 15:
-        segs, target = _resolve_media_playlist(channel_url)
+    while misses < 20:
+        if media_url is None:
+            media_url = _resolve_to_media_url(channel_url)
+            if media_url is None:
+                misses += 1
+                time.sleep(1.0)
+                continue
+        try:
+            r = SESSION.get(media_url, timeout=15)
+            content = r.text if r.status_code < 400 else ""
+        except http_requests.RequestException:
+            content = ""
+        if "#EXTINF" not in content:
+            media_url = None  # token rotated/expired -> re-resolve next loop
+            misses += 1
+            time.sleep(1.0)
+            continue
+        segs, target = _parse_media_segments(content, media_url)
         new = [(seq, u) for (seq, u) in segs if seq > last_seq]
         if last_seq == -1 and len(new) > 3:
-            new = new[-3:]  # start near the live edge, not the whole buffer
+            new = new[-3:]  # start near the live edge
         if not new:
             misses += 1
-            time.sleep(min(target, 3.0) if target else 1.0)
+            time.sleep(min(target, 3.0) * 0.5 if target else 1.0)
             continue
         misses = 0
         for seq, seg_url in new:
@@ -382,7 +403,8 @@ def _ts_stream(channel_url: str):
                 rseg = SESSION.get(seg_url, stream=True, timeout=20)
                 if rseg.status_code >= 400:
                     rseg.close()
-                    continue
+                    media_url = None  # token likely rotated -> re-resolve
+                    break
                 for chunk in rseg.iter_content(chunk_size=65536):
                     if chunk:
                         yield chunk
@@ -390,7 +412,7 @@ def _ts_stream(channel_url: str):
                 last_seq = seq
             except http_requests.RequestException:
                 return
-        time.sleep(min(target, 3.0) * 0.4 if target else 1.0)
+        time.sleep(min(target, 3.0) * 0.3 if target else 1.0)
 
 
 def _rewrite_hls(content: str, original_url: str) -> Response:
