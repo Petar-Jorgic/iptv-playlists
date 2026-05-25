@@ -261,30 +261,14 @@ def stream():
     # HLS playlists need URL rewriting so the player fetches segments through us
     # Use the ORIGINAL url as base for rewriting so relative segment paths resolve correctly
     if ("m3u8" in resolved_url or "mpegurl" in content_type.lower() or "m3u" in content_type.lower()) and "html" not in content_type.lower():
-        content = r.text
-        base_url = resolved_url
-        # If this is a MASTER playlist (variant list), resolve the first variant
-        # server-side and return the MEDIA playlist (with segments) directly. This
-        # keeps the master->chunklist hop inside ONE request so the source session
-        # cookie stays valid, and lets the player poll a stable URL while always
-        # getting fresh segments. Token-rotating live HLS (pink.rs) otherwise hands
-        # the player a short-lived chunklist token that expires -> empty playlist ->
-        # ffmpeg "End of file" reconnect loop -> no segments.
-        depth = 0
-        while "#EXT-X-STREAM-INF" in content and depth < 3:
-            variant = _first_variant_url(content, base_url)
-            if not variant:
-                break
-            try:
-                rv = SESSION.get(variant, stream=True, timeout=15)
-            except http_requests.RequestException:
-                break
-            if rv.status_code >= 400:
-                break
-            base_url = variant
-            content = rv.text
-            depth += 1
-        return _rewrite_hls(content, base_url)
+        # Serve live HLS as a continuous MPEG-TS stream instead of an HLS playlist.
+        # The player then gets plain TS, so jellyfin-ffmpeg's allowed_segment_extensions
+        # check (which rejects proxied /stream?url=... segment URLs and appends #EXTM3U)
+        # never runs. Segments are downloaded server-side through the VPN and
+        # concatenated; the source is re-resolved (master->media) each poll so
+        # token-rotating live HLS keeps delivering fresh segments.
+        r.close()
+        return Response(_ts_stream(resolved_url), content_type="video/mp2t")
 
     # Everything else (TS segments, AAC, etc.) – stream through
     def generate():
@@ -310,6 +294,84 @@ def _first_variant_url(content: str, base_url: str) -> str | None:
                 if u and not u.startswith("#"):
                     return u if u.startswith("http") else urljoin(base_dir, u)
     return None
+
+
+def _parse_media_segments(content: str, base_url: str):
+    """Parse a media playlist -> ([(sequence, absolute_segment_url), ...], target_dur)."""
+    base_dir = base_url.rsplit("/", 1)[0] + "/"
+    media_seq = 0
+    target = 2.0
+    segs = []
+    idx = 0
+    for line in content.splitlines():
+        s = line.strip()
+        if s.startswith("#EXT-X-MEDIA-SEQUENCE:"):
+            try:
+                media_seq = int(s.split(":", 1)[1])
+            except ValueError:
+                pass
+        elif s.startswith("#EXT-X-TARGETDURATION:"):
+            try:
+                target = float(s.split(":", 1)[1])
+            except ValueError:
+                pass
+        elif s and not s.startswith("#"):
+            seg = s if s.startswith("http") else urljoin(base_dir, s)
+            segs.append((media_seq + idx, seg))
+            idx += 1
+    return segs, target
+
+
+def _resolve_media_playlist(channel_url: str):
+    """Fetch a channel URL, follow master->media variant, return (segments, target_dur)."""
+    base_url = channel_url
+    for _ in range(4):
+        try:
+            r = SESSION.get(base_url, timeout=15)
+        except http_requests.RequestException:
+            return [], 2.0
+        if r.status_code >= 400:
+            return [], 2.0
+        content = r.text
+        if "#EXT-X-STREAM-INF" in content:
+            v = _first_variant_url(content, base_url)
+            if not v:
+                break
+            base_url = v
+            continue
+        return _parse_media_segments(content, base_url)
+    return [], 2.0
+
+
+def _ts_stream(channel_url: str):
+    """Yield live HLS segments (downloaded through the VPN) as a continuous MPEG-TS
+    byte stream, so the player gets plain TS instead of an HLS playlist."""
+    last_seq = -1
+    misses = 0
+    while misses < 15:
+        segs, target = _resolve_media_playlist(channel_url)
+        new = [(seq, u) for (seq, u) in segs if seq > last_seq]
+        if last_seq == -1 and len(new) > 3:
+            new = new[-3:]  # start near the live edge, not the whole buffer
+        if not new:
+            misses += 1
+            time.sleep(min(target, 3.0) if target else 1.0)
+            continue
+        misses = 0
+        for seq, seg_url in new:
+            try:
+                rseg = SESSION.get(seg_url, stream=True, timeout=20)
+                if rseg.status_code >= 400:
+                    rseg.close()
+                    continue
+                for chunk in rseg.iter_content(chunk_size=65536):
+                    if chunk:
+                        yield chunk
+                rseg.close()
+                last_seq = seq
+            except http_requests.RequestException:
+                return
+        time.sleep(min(target, 3.0) * 0.4 if target else 1.0)
 
 
 def _rewrite_hls(content: str, original_url: str) -> Response:
