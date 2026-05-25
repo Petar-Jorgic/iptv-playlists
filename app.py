@@ -1,3 +1,4 @@
+import base64
 import json
 import logging
 import os
@@ -194,7 +195,11 @@ def playlist():
     for line in lines:
         stripped = line.strip()
         if stripped and not stripped.startswith("#"):
-            out.append(f"{base}/stream?url={quote(stripped, safe='')}")
+            # Encode the source URL into a .ts path (no '.m3u8' anywhere) so Jellyfin
+            # detects the channel as MPEG-TS and does NOT force ffmpeg '-f hls'
+            # (which fails on our continuous TS stream).
+            tok = base64.urlsafe_b64encode(stripped.encode()).decode().rstrip("=")
+            out.append(f"{base}/live/{tok}.ts")
         else:
             out.append(line)
 
@@ -223,6 +228,20 @@ def pluto(channel_id):
         f"&includeExtendedEvents=false&serverSideAds=false&sid={sid}"
     )
     return redirect(url, code=302)
+
+
+@app.route("/live/<token>")
+def live(token):
+    """Serve a channel as a continuous MPEG-TS stream. <token> is base64url(source
+    URL)+'.ts' so Jellyfin sees a .ts URL and uses the TS demuxer instead of -f hls."""
+    if token.endswith(".ts"):
+        token = token[:-3]
+    try:
+        pad = "=" * (-len(token) % 4)
+        source_url = base64.urlsafe_b64decode(token + pad).decode()
+    except Exception:
+        return "bad token", 400
+    return Response(_ts_stream(source_url), content_type="video/mp2t")
 
 
 @app.route("/stream")
