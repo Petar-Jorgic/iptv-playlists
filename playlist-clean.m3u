@@ -19,3 +19,5 @@ https://cdn3.wowza.com/1/T2NXeHF6UGlGbHY3/WFluRldQ/hls/live/playlist.m3u8
 https://tv.rtvnp.rs/stream.m3u8
 #EXTINF:-1 tvg-id="SandzakTV.rs@SD" tvg-logo="https://i.imgur.com/lm9Fgsp.png" group-title="Undefined",Sandzak TV (576p)
 https://streaming.iptv.nextfiber.rs/nxt004/master.m3u8
+#EXTINF:-1 tvg-id="TVAS.rs" tvg-logo="https://raw.githubusercontent.com/Petar-Jorgic/iptv-playlists/master/logos/TVAS.rs.png" group-title="General",RTV AS (576p)
+https://stream.toobimedia.org/public/assabac.m3u8
